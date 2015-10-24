@@ -1,0 +1,58 @@
+header {
+    height: 170px;
+}
+
+.header-links {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, #FFFFFF),
+        color-stop(1, #9E9E9E)
+    );
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #9E9E9E 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #9E9E9E 100%);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9E9E9E 100%);
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9E9E9E 100%);
+    background-image: linear-gradient(to top, #FFFFFF 0%, #9E9E9E 100%);
+    height: 25px;
+    padding: 10px 5px;
+}
+    .client-link {
+        clear: none;
+        float: left;
+        margin-left: 70px; 
+    }
+    .langs-select {
+        clear: none;
+        float: right;
+        margin-right: 90px;
+    }
+.header-logo {
+    float: left;
+    height: 90px;
+    width: 288px;
+    background: #FFF url('../img/website/page-logo.jpg') no-repeat;
+    margin: 15px 5px 0 80px;
+}
+.header-menu {
+    float: right;
+    margin: 50px 30px 0 0;
+}
+.header-menu li {
+    display: inline;
+    padding: 5px 20px;
+}
+.header-menu a {
+    color: #999;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12pt;
+}
+.header-menu a:hover {
+    color: #333;
+}
+
+section {
+    padding: 20px 40px 80px 30px;
+}

@@ -1,0 +1,82 @@
+/** Layout **/
+header{
+    height: 70px;
+    background: #FFF url('../img/logo.png') no-repeat 30px 5px;
+}
+.head-letters{
+    padding: 35px 280px;
+    font-size: 130%;
+    color: #000;
+}
+.head-letters a{
+    color: #B00;
+}
+.menu-admin {
+    background-color: #000;
+    padding: 5px;
+    font-size: 120%;
+}
+.menu-admin li {
+    display: inline;
+    margin-left: 40px;   
+}
+.menu-admin li a{
+    text-decoration: none;
+    color: #E6D91D;
+}
+.menu-admin li a:hover{
+    font-style: italic;
+    text-decoration: underline;
+}
+#content{
+	background: #fff;
+	clear: both;
+	color: #333;
+	padding: 10px 20px 40px 20px;
+	overflow: auto;
+}
+#footer {
+	clear: both;
+	padding: 6px 10px;
+	text-align: right;
+    border-top: 1px solid #999;
+}
+#header a, #footer a {
+	color: #fff;
+}
+
+.disable-row td {
+    color: #900;
+}
+
+.add-new{
+    margin: 5px 0 20px 20px; 
+}
+
+.ui-dialog input {
+    width: 200px;
+}
+
+.ui-dialog .input {
+    float: right;
+}
+
+.ui-dialog label {
+    padding-right: 5px;
+}
+
+.ui-state-error {
+    display: none;
+    height: 20px;
+    padding: 5px 10px;
+}
+
+.ui-state-error .ui-icon {
+    float: left; 
+}
+.ui-state-error .error-text {
+    font-size: 90%;
+}
+.ui-state-error strong {
+    padding-left: 5px;
+}
