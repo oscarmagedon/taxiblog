@@ -31,8 +31,7 @@ class LogsController extends AppController
             $this->redirect(array('action' => 'edit', $this->Log->id));
         }
         
-        $units = $this->Log->Unit->find('list',array(
-                        'order'      => 'title ASC'));
+        $units = $this->Log->Unit->getUnitsUsers();
         
         $this->set(compact('units'));
     }
@@ -51,15 +50,22 @@ class LogsController extends AppController
         
         $this->data = $this->Log->read(null,$id);
         
-        $units = $this->Log->Unit->find('list',array(
-                        'order' => 'title ASC'));
-        
+        $units = $this->Log->Unit->getUnitsUsers();
         
         $explore = $this->Log->exploreFolder($id);
         
         $this->set(compact('units','explore'));
     }
     
+
+    public function admin_attached ($id = null)
+    {   
+        $explore = $this->Log->exploreFolder($id);
+        
+        $this->set(compact('explore','id'));
+    }
+
+
     public function admin_upfile()
     {
        $this->Log->uploadImages(

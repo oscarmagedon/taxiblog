@@ -2,8 +2,14 @@
 
 <button class='add-new modal-button' 
     href="<?php echo $this->Html->url(array('action' => 'add','admin' => true)) ?>">
-    Agregar Inversor</button>
-
+    Agregar Inversor
+</button>
+<div class="pagination">
+    <?php echo $this->Paginator->counter(
+            'Pagina {:page} de {:pages}, mostrando {:current} registros de 
+            {:count} totales, empezando en {:start}, terminando en {:end}' );
+    ?>
+</div>
 <table>
     <tr>
         <th>ID</th>
@@ -55,7 +61,31 @@
     endforeach; 
     ?>
 </table>
+<p class="pagination">
+    <?php
+    // Shows the next and previous links
+    echo $this->Paginator->prev(
+      '« Previous',
+      null,
+      null,
+      array('class' => 'disabled')
+    );
+    
+    // Shows the page numbers
+    echo $this->Paginator->numbers();
 
+    
+    echo $this->Paginator->next(
+      'Next »',
+      null,
+      null,
+      array('class' => 'disabled')
+    );
+
+    // prints X of Y, where X is current page and Y is number of pages
+    //echo $this->Paginator->counter();
+    ?>
+</p>
 
 <script>
 var addUrl  = '<?php echo $this->Html->url(array('action' => 'add','admin' => true)) ?>',

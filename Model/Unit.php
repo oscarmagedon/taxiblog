@@ -13,6 +13,18 @@ class Unit extends AppModel
         )
     );
     
+    
+    public function getUnitsUsers()
+    {
+        $allUnits = $this->find('all');
+        $listed   = array();
+        
+        foreach ($allUnits as $unit) {
+            $listed[$unit['Unit']['id']] = $unit['Unit']['title'] . " - " . $unit['User']['name'];
+        }
+        
+        return $listed;
+    }
 }
 /* 
  * To change this license header, choose License Headers in Project Properties.

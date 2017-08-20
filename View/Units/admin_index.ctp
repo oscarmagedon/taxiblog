@@ -16,7 +16,7 @@ echo $this->Form->input('userId',array('options' => $users,
         <th>NOMBRE</th>
         <th>USUARIO</th>
         <th>MODELO</th>
-        <th>LICENCIA</th>
+        <th>PLACA</th>
         <th>ACCIONES</th>
     </tr>    
     <?php

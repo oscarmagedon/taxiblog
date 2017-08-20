@@ -9,7 +9,8 @@
         <th>Unidad</th>
         <th>Titulo</th>
         <th>Descrip.</th>
-        <th>Acciones</th>
+        <th>Editar</th>
+        <th>Archivos</th>
     </tr>
     <?php
     foreach ($logs as $log) :
@@ -21,10 +22,16 @@
             <td><?php echo $log['Log']['title'] ?></td>
             <td><?php echo $log['Log']['content'] ?></td>
             <td>
-                <button class="edit-adm redir-btn" 
+                <button class="edit-adm modal-btn" 
                     href="<?php echo $this->Html->url(array('action' => 'edit', 
                                     $log['Log']['id'],'admin' => true)) ?>">
                     Editar</button>
+            </td>
+            <td>
+                <button class="file-adm redir-btn" 
+                    href="<?php echo $this->Html->url(array('action' => 'attached', 
+                                    $log['Log']['id'],'admin' => true)) ?>">
+                    Archivos</button>
             </td>
         </tr>
     
@@ -47,6 +54,9 @@ $(function () {
     
     $('.edit-adm').button( { 
         icons: { primary: "ui-icon-pencil" } , text: false } );
+
+    $('.file-adm').button( { 
+        icons: { primary: "ui-icon-folder-open" } , text: false } );
     
     $(".redir-btn").click( function (){
         location = $(this).attr('href');

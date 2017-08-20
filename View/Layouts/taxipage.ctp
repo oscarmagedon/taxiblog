@@ -39,19 +39,17 @@
         <div class='header-menu'>
             <ul>        
             <?php
-                echo "<li>" . $this->Html->link('INICIO', array(
-                                    'action'     => 'home')) ."</li>";
 
                 echo "<li>" . $this->Html->link('NOSOTROS', array(
-                                'action'     => 'about')) ."</li>";
+                                'action'     => 'home')) ."</li>";
 
-                echo "<li>" . $this->Html->link('SERVICIOS', array(
-                                'action'     => 'services')) ."</li>";
+                echo "<li>" . $this->Html->link('TAXISTA', array(
+                                'action'     => 'taxista')) ."</li>";
 
-                echo "<li>" . $this->Html->link('CONTACTO', array(
-                                'action'     => 'services')) ."</li>";
+                echo "<li>" . $this->Html->link('INVERSIONISTA', array(
+                                'action'     => 'investor')) ."</li>";
 
-                echo "<li>" . $this->Html->link('PREGUNTAS', array(
+                echo "<li>" . $this->Html->link('ADMINISTRACIÓN', array(
                                 'action'     => 'services')) ."</li>";
 
             ?>

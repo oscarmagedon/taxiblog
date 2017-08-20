@@ -109,9 +109,9 @@ class UsersController extends AppController {
     
     public function admin_passwd($id = null) {
         
-        $this->User->id = $id;
+        //$this->User->id = $id;
         
-         if ($this->request->is('post')) {
+        if ($this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash('Password Cambiado.');
             } else {
@@ -120,6 +120,7 @@ class UsersController extends AppController {
         
             $this->redirect(array('action' => 'index'));
         }
+        $this->request->data = $this->User->read(null, $id);
         
     }
     

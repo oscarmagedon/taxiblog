@@ -71,6 +71,8 @@ class AppController extends Controller {
                 )
             )    
         );
+
+    public $helpers = array('Thumbnail');
      
     //public $helpers = array('Html','Form','Js','Time','Folder','File');
 

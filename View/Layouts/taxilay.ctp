@@ -8,9 +8,11 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('cake.based','jquery-ui','taxiblog'));
+		echo $this->Html->css(array('cake.based','jquery-ui','taxiblog',
+            'slick','slick-theme'));
 
-        echo $this->Html->script(array('jquery-2.1.1.min','jquery-ui.min','jq-taxiblog'));
+        echo $this->Html->script(array('jquery-2.1.1.min','jquery-ui.min',
+            'jq-taxiblog','slick.min'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -42,7 +44,9 @@
         <?php
                 
         switch ($userData['role']) {
+            
             case 'ROOT':
+
                 echo "<li>" . $this->Html->link('Users', array(
                                 'controller' => 'users',
                                 'action'     => 'index',
@@ -51,21 +55,35 @@
                 break;
 
             case 'ADMIN':
-
+                
+                $cls = null;
+                if ( $this->params['controller'] == 'users' )
+                    $cls = ['class'=>'is-active'];                        
+                                
                 echo "<li>" . $this->Html->link('USUARIOS', array(
                                 'controller' => 'users',
                                 'action'     => 'index',
-                                'admin'      => true)) ."</li>";
+                                'admin'      => true),$cls) . "</li>";
+
+                $cls = null;
+                if ( $this->params['controller'] == 'units' )
+                    $cls = ['class'=>'is-active'];
+
 
                 echo "<li>" . $this->Html->link('UNIDADES', array(
                                 'controller' => 'units',
                                 'action'     => 'index',
-                                'admin'      => true)) ."</li>";
+                                'admin'      => true),$cls) ."</li>";
+
+                $cls = null;
+                if ( $this->params['controller'] == 'logs' )
+                    $cls = ['class'=>'is-active'];
+
 
                 echo "<li>" . $this->Html->link('NOVEDADES', array(
                                 'controller' => 'logs',
                                 'action'     => 'index',
-                                'admin'      => true)) ."</li>";
+                                'admin'      => true),$cls) ."</li>";
 
                 break;
 

@@ -65,7 +65,8 @@ if (!defined('APP_DIR')) {
 /*/
 define('CAKE_CORE_INCLUDE_PATH', '/home/oscarmagedon/public_html/libs/php/cakephp-2.4/lib');
 /*/
-define('CAKE_CORE_INCLUDE_PATH', '/opt/lampp/htdocs/cakephp-2.4/lib');
+//define('CAKE_CORE_INCLUDE_PATH', '/opt/lampp/htdocs/cakephp-2.4/lib');
+define('CAKE_CORE_INCLUDE_PATH', '/opt/lampp/htdocs/cakephp-2.8.9/lib');
 /*/
 
 /**

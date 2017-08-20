@@ -8,11 +8,11 @@
     
 <?php
 
-echo $this->Form->create('User',array('action' => 'passwd'));
+echo $this->Form->create('User');
 
 echo $this->Form->input('id');
 
-echo $this->Form->input('password');
+echo $this->Form->input('password',['label'=>'Nuevo Password','value'=>'']);
 
 echo $this->Form->input('reppsswd',array(
     'type' => 'password', 'label' => 'Conf. Psw.', 'div' => 'input required'
